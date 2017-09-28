@@ -1,0 +1,70 @@
+@keyframes textAnimator1
+  0%
+    +translate((random(100)+px),(random(100)+px))
+    color: #00aeff
+    opacity: 0
+
+  100%
+    +translate(0px,0px)
+    color: $dark
+    opacity: 1
+
+@keyframes textAnimator2
+  0%
+    +translate(200px,200px)
+    +transform(scale(1,1))
+    +transform(rotateY(45deg))
+    color: #00aeff
+    opacity: 0
+  50%
+    +transform(scale(1.5,1.5))
+
+  100%
+    +translate(0px,0px)
+    +transform(scale(1,1))
+    +transform(rotateY(0deg))
+    color: $dark
+    opacity: 1
+
+
+@keyframes textAnimator3
+  0%
+    opacity: 0
+    color: #00aeff
+
+  75%
+    opacity: 0
+
+  100%
+    opacity: 1
+    color: $dark
+
+@keyframes hovering
+  50%
+    transform: translateY(-3px)
+
+  100%
+    transform: translateY(-6px)
+
+@keyframes imgAnimator1
+  0%
+    +transform(translate(-50px,20px))
+
+    opacity: 0
+
+
+
+  100%
+    +transform(translate(0px,0px))
+    opacity: 1
+
+@keyframes shadow
+  0%
+    transform: translateY(6px)
+    opacity: .4
+  50%
+    transform: translateY(3px)
+    opacity: 1
+  100%
+    transform: translateY(6px)
+    opacity: .4

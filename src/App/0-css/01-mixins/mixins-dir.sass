@@ -1,0 +1,67 @@
+=rotate($val)
+  -webkit-transform:  rotate($val)
+  -moz-transform:     rotate($val)
+  -ms-transform:      rotate($val)
+  transform:          rotate($val)
+
+
+=translate($val1, $val2)
+  -webkit-transform:  translate($val1, $val2)
+  -moz-transform:     translate($val1, $val2)
+  -ms-transform:      translate($val1, $val2)
+  transform:          translate($val1, $val2)
+
+=translateAndRotate($val1, $val2, $val3)
+  -webkit-transform:  translateX($val1) translateY($val2) rotate($val3)
+  -moz-transform:     translateX($val1) translateY($val2) rotate($val3)
+  -ms-transform:      translateX($val1) translateY($val2) rotate($val3)
+  transform:          translateX($val1) translateY($val2) rotate($val3)
+
+=transform($transform)
+  -webkit-transform:  $transform
+  -moz-transform:     $transform
+  -ms-transform:      $transform
+  -o-transform:       $transform
+  transform:          $transform
+
+=zeroPads
+  padding: 0px
+  margin: 0px
+
+=grid-12
+  width: 100%
+
+=grid-6
+  width: 50%
+  margin: 0 auto
+
+=grid-3
+  width: 25%
+  margin: 0 auto
+
+=liAnimator($childNo, $animator, $timing)
+  transition-duration: .3s
+  transition-property: transform
+  @for $i from 1 through $childNo
+    &:nth-child(#{$i})
+      animation:
+        name: $animator
+        duration: $timing * $i
+        timing-function: ease-in-out
+        fill-mode: none
+      &:hover
+        transform: scale(1.3) rotate(random(360)+deg)
+        color: rgba(random(80), random(255), random(255), 1)
+
+=img-hover($childNo, $animator, $timing)
+  transition-duration: .3s
+  transition-property: transform
+  @for $i from 1 through $childNo
+    &:nth-child(#{$i})
+      animation:
+        name: $animator
+        duration: $timing * $i
+        timing-function: ease-out
+        fill-mode: none
+      &:hover
+        transform: scale(1.3) rotate(13deg)

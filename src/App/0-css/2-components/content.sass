@@ -1,0 +1,52 @@
+.content
+  +grid-6
+  .content-inner
+    display: inline-block
+    width: 50%
+    position: relative
+    top: 50%
+    transform: translateY(30%)
+    ul
+      display: flex
+      flex-direction: row
+      +zeroPads
+      li
+        list-style: none
+
+.profileName
+  border-top: 6px solid
+  border-bottom: 6px solid
+  position: relative
+  ul
+  div
+    display: inline-block
+
+
+.profileName-fName
+  ul
+    +zeroPads
+    li
+      font-size: 8vw
+      +liAnimator(8, textAnimator2, 120ms)
+
+.profileName-sName
+  position: absolute
+  top: 0px
+  right: 0px
+  +zeroPads
+  +translateAndRotate(105%, 35%, 90deg)
+  transform-origin: 0% 0%
+  font-size: 3.29vw
+  ul
+    li
+      +liAnimator(8, textAnimator2, 100ms)
+
+.content-inner
+  .introName
+    font-size: 2vw
+    ul
+      li
+        +liAnimator(18, textAnimator3, 50ms)
+
+.port-img
+  +img-hover(1, imgAnimator1, .4s)

@@ -1,0 +1,37 @@
+nav
+  color: $dark
+  +zeroPads
+  background-color: $headerBGColor
+  border-bottom: 1px solid #f3f3f3
+  &:hover
+    // background-color: $dark
+    // color: $white
+  .brand
+    width: 50%
+  .Links
+    width: 50%
+  ul
+    +zeroPads
+    li
+      font-size: $fontM
+      list-style: none
+      display: inline
+      padding-right: $paddingM
+      cursor: pointer
+
+      &:hover
+        color: #777
+        
+
+.innerNav
+  +grid-6
+  div
+    display: inline-block
+
+.fName
+  font-size: 50px
+
+.sName
+  +translateAndRotate(-35%,-14px, 90deg)
+  text-align: left
+  font-size: 9px
